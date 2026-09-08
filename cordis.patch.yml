@@ -1,0 +1,7 @@
+# Installable bundle patch: mount the native GUI routing tool.
+- insert:
+    - id: dsh-codex-computer-use
+      name: dsh-codex-computer-use
+      config:
+        timeoutMs: 120000
+        maxOutputBytes: 4194304

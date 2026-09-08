@@ -1,0 +1,34 @@
+{
+  "name": "dsh-codex-computer-use",
+  "version": "0.1.0",
+  "description": "A DSH-native tool that routes macOS desktop tasks through the local Codex Computer Use CLI.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./codex": "./lib/codex.js"
+  },
+  "files": ["lib/", "test/", "README.md", "LICENSE", "cordis.patch.yml", "package.json"],
+  "engines": { "node": ">=22.19.0" },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "check": "node --check lib/codex.js && node --check lib/index.js && npm test",
+    "test": "node --test test/*.test.js"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.1.2-rc.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExampleXX/dsh-codex-computer-use.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ExampleXX/dsh-codex-computer-use/issues"
+  },
+  "homepage": "https://github.com/ExampleXX/dsh-codex-computer-use"
+}
